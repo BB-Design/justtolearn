@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Form Validation Using Java Script</title>
+<style>
+body{
+background:linear-gradient(#114357,#f29492)fixed; /*linear,left top, left bottom,from(#fff),to(#cbccc8)*/
+margin:50px 0px;
+padding:0px;
+text-align:center;
+align:center;
+}
+</style>
+<script type="text/javascript">
+function doFormReset(){
+$(".invalid").removeClass("invalid");
+}
+
+</script>
+<script type="text/javascript">
+function validation(){
+
+if(document.f1.name.value==""){
+window.alert("Plz Enter Your Name");
+return false;
+}
+else if(document.f1.dob.value==""){
+window.alert("Plz Enter 'Your DOB:");
+return false;
+}
+else if(document.f1.placedob.value==""){
+window.alert("Plz Enter 'Your PLACE OF DOB:");
+return false;
+}
+else if(document.f1.father.value==""){
+window.alert("Plz Enter 'Your FATHER NAME:");
+return false;
+}
+else if(document.f1.mother.value==""){
+window.alert("Plz Enter 'Your MOTHER NAME:");
+return false;
+}
+else if(document.f1.email.value==""){
+window.alert("Plz Enter 'Your Email:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1){
+window.alert("Plz Enter Your Valid Email");
+return false;
+}
+else if(document.f1.addr.value==""){
+window.alert("Plz Enter Your Address:");
+return false;
+}
+else if(document.f1.country.selectedIndex==0){
+window.alert("Plz Select Your Country:");
+return false;
+}
+else if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false)){
+window.alert("Plz Choose your gender:");
+return false;
+}
+else if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&(document.f1.chk[2].checked==false)){
+window.alert("Plz Select Your Qualification:");
+return false;
+}}</script>
+</head>
+
+<body>
+<h3 style="Text-align:center">PASSPORT AUTOMATION SYSTEM</h3>
+
+
+<form style:alignemnt=center name="f1" action="Register.html" onsubmit="return validation()" onreset="return doFormReset()">
+<fieldset>
+<legend>Registration Form</legend></br>
+<table border="1" style:align=center>
+<tr><td>Name:</td><td><input type="text" name="name" size="31"></td></tr>
+
+<tr><td>DOB(dd/mm/yy)</td><td><input type="text" name="dob" size="10"></td></tr>
+<tr><td>Place of DOB</td><td><input type="text" name="placedob" size="31"></td></tr>
+<tr><td>Father's Name:</td><td><input type="text" name="father" size="31"></td></tr>
+<tr><td>Mother's Name:</td><td><input type="text" name="mother" size="31"></td></tr>
+
+<tr><td>E-mail:</td><td><input type="text" name="email" size="31"></td></tr>
+<tr><td>Adrress:</td><td><TExtarea name="addr" rows="5" copls="25"></Textarea></td></tr>
+
+<tr>
+<td>Country:</td>
+<td><select name="country">
+<option>----Select your country----</option>
+<option>India</option>
+<option>China</option>
+<option>Nepal</option>
+<option>Myanmmar</option>
+</select>
+</td>
+</tr>
+ 
+<tr>
+ <td>Gender:</td>
+ <td>
+<input type="radio" name="rdo">Male
+
+<input type="radio" name="rdo">Female
+
+<input type="radio" name="rdo">Transgender
+
+</td>
+</tr>
+<tr>
+<td>Qualification:</td>
+<td><input type="checkbox" name="rdo">B.E
+
+<input type="checkbox" name="rdo">M.E
+
+<input type="checkbox" name="rdo">Ph.D.
+</td>
+</tr>
+</table></br>
+<input type="submit" value="Register">
+<input type="reset"  value="cancel">
+</fieldset>
+</form>
+
+
+</body>
+</html>                                                                                 
